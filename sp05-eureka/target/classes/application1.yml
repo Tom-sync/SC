@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: eureka-server
+
+server:
+  port: 2001
+
+# eureka1 �� eureka2 ע��
+eureka:
+  instance:
+    hostname: eureka1
+  server:
+    enable-self-preservation: false
+  client:
+    service-url:
+      defaultZone: http://eureka2:2002/eureka
+
+
